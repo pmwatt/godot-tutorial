@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="BaseRock" type="StaticBody2D"]
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
