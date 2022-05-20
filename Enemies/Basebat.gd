@@ -76,7 +76,7 @@ func pick_random_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front() # remove and return the first state
 
-# Hit by sword
+# Hit by sword, ERROR HERE; happens whenever bat enters the goal
 func _on_HurtBox_area_entered(area): # area == hitbox; area.damage == hitbox.damage
 	stats.health -= area.damage # automatic setget that may emit no_health , less coupling
 	knockback = area.knockback_vector * 120
@@ -86,6 +86,7 @@ func _on_HurtBox_area_entered(area): # area == hitbox; area.damage == hitbox.dam
 
 func _on_Stats_no_health():
 	queue_free()
+	
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position

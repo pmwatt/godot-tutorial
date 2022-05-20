@@ -7,6 +7,7 @@ export(int) var ROLL_SPEED
 export(int) var ACCELERATION
 export(int) var FRICTION
 export(float) var INVISIBILITY_TIME
+export(Vector2) var START_POSITION = Vector2(160, 88)
 
 enum {
 	MOVE, # starts at 0 by default
@@ -25,6 +26,8 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/SwordHitBox
 onready var hurtbox = $HurtBox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
+onready var comment = $Comment
+onready var hitTimer = $HitTimer
 
 func _ready(): # makes sure that nodes are initialized here, global doesn't guarandee
 	randomize()
@@ -102,7 +105,19 @@ func _on_HurtBox_area_entered(area):
 
 func _on_HurtBox_invincibility_started():
 	blinkAnimationPlayer.play("start")
+	hitTimer.start()
+	displayHitComment()
 
 
 func _on_HurtBox_invincibility_ended():
 	blinkAnimationPlayer.play("stop")
+
+
+func _on_HitTimer_timeout():
+	comment.visible = false
+
+func displayHitComment():
+	var comments = ["GAHH!!", "Ouch!"]
+	comment.text = comments[rand_range(0, 2)]
+	
+	comment.visible = true
