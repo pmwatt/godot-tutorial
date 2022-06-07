@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Tutorial Rpg"
-run/main_scene="res://World.tscn"
+run/main_scene="res://UI/Menu.tscn"
 config/icon="res://World/Bush.png"
 
 [autoload]
