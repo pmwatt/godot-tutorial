@@ -10,8 +10,10 @@ This just serves as a playground for me to mess things up in godot.
 - Red (fast) bat and large (sturdy) bat enemies
 - Fancy effects when hitting bushes
 - Display messages when the player gets hit by bat (to be polished)
+- Start Menu
 
 ## Installation
 1. Clone this repo or download zip, etc.
 2. Download Godot [here](https://godotengine.org/).
 3. Run godot and open the downloaded folder as project.
+4. Press "Play" button at the top right.
