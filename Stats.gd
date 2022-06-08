@@ -1,7 +1,7 @@
 extends Node
 
 # export as script variables
-export(int) var max_health = 4 setget set_max_health # just by default; global var for all nodes to access Player's health; enemy nodes inherit this
+export(int) var max_health = 5 setget set_max_health # just by default; global var for all nodes to access Player's health; enemy nodes inherit this
 var health = max_health setget set_health # whenever health gets reassigned, calls set_health
 # setget <setter>, <getter>
 

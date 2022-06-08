@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Enemies/RedBat.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/BossBat.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/grass1.jpg" type="Texture" id=12]
+[ext_resource path="res://UI/MenuUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/Goal.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=2]
@@ -1035,3 +1036,7 @@ margin_left = 16.0
 margin_top = 8.0
 margin_right = 75.0
 margin_bottom = 19.0
+
+[node name="MenuUI" parent="CanvasLayer" instance=ExtResource( 13 )]
+margin_left = 272.0
+margin_right = 320.0

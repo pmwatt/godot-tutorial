@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/MenuUI.gd" type="Script" id=1]
+
+[node name="MenuUI" type="MenuButton"]
+margin_right = 48.0
+margin_bottom = 20.0
+focus_mode = 2
+text = "Menu"
+items = [ "Restart", null, 0, false, false, 0, 0, null, "", false, "Quit", null, 0, false, false, 1, 0, null, "", false ]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
